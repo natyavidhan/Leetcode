@@ -4,6 +4,5 @@ class Solution:
         for idx, num in enumerate(nums):
             if num == target:
                 return idx
-            if num < target:
-                possible = idx+1
+            possible = idx+1 if num < target else possible
         return possible
