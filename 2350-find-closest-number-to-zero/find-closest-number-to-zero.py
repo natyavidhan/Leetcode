@@ -6,9 +6,6 @@ class Solution:
         for n in nums:
             _n = mod(n)
             _closest = mod(closest)
-            if _n < _closest:
+            if _n < _closest or ((_n == _closest) and (n > closest)):
                 closest = n
-            elif _n == _closest:
-                if n > closest:
-                    closest = n
         return closest
