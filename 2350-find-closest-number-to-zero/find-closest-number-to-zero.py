@@ -4,9 +4,11 @@ class Solution:
             return -x if x < 0 else x
         closest = nums[0]
         for n in nums:
-            if mod(n) < mod(closest):
+            _n = mod(n)
+            _closest = mod(closest)
+            if _n < _closest:
                 closest = n
-            elif mod(n) == mod(closest):
+            elif _n == _closest:
                 if n > closest:
                     closest = n
         return closest
