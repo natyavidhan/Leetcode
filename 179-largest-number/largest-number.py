@@ -2,7 +2,7 @@ class Solution:
     def largestNumber(self, nums: List[int]) -> str:
         if not any(map(bool, nums)):
             return "0"
-        nums = [str(i) for i in nums]
+        nums = list(map(str, nums))
         l = len(nums)
         for x, n in enumerate(nums):
             if l > x+1:
